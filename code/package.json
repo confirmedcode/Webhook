@@ -1,0 +1,28 @@
+{
+  "name": "Node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "startLocal": ". ../../setLocalEnv.sh && ENVIRONMENT=LOCAL NODE_ENV=development nodemon index.js",
+    "test": "NODE_ENV=test nyc mocha --recursive --timeout 120000 --exit",
+    "testLocal": ". ../../setLocalEnv.sh && ENVIRONMENT=LOCAL NODE_ENV=test nyc mocha --recursive --timeout 120000 --exit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-winston": "^3.0.0",
+    "fs-extra": "^5.0.0",
+    "shared": "file:../../shared",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1"
+  }
+}
