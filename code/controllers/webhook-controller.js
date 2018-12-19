@@ -89,7 +89,7 @@ addRawBody,
           Logger.info("Not yet paid, checking for referral discounts to add to invoice.");
           const subscriptionItem = getSubscriptionItemFromInvoice(event);
           if (subscriptionItem == null) {
-            Logger.error("no subscription item found in this invoice on invoice_created: " + JSON.stringify(event));
+            Logger.info("no subscription item found in this invoice on invoice_created: " + JSON.stringify(event));
             return;
           }
           const planId = subscriptionItem.plan.id;
@@ -120,7 +120,7 @@ addRawBody,
         var stripeId = event.data.object.customer;
         const subscriptionItem = getSubscriptionItemFromInvoice(event);
         if (subscriptionItem == null) {
-          Logger.error("no subscription item found in this invoice on payment_succeeded: " + JSON.stringify(event));
+          Logger.info("no subscription item found in this invoice on payment_succeeded: " + JSON.stringify(event));
           return;
         }
         const planId = subscriptionItem.plan.id;
