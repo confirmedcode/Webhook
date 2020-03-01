@@ -134,7 +134,7 @@ addRawBody,
           var isFirstPayment = false;
           if (event.data.object.amount_remaining <= 0 && subscriptionItem.amount > 0 && event.data.object.number.endsWith("0002")) {
             isFirstPayment = true;
-            Email.sendReferralPromo(thisUser.email, thisUser.referralCode);
+            //Email.sendReferralPromo(thisUser.email, thisUser.referralCode);
           }
           if (thisUser.referredBy) {
             Logger.info("this user was referred by " + thisUser.referredBy);
