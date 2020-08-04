@@ -27,7 +27,7 @@ The Webhook Server always returns status code `200` to Stripe.
 ## Feedback
 If you have any questions, concerns, or other feedback, please let us know any feedback in Github issues or by e-mail.
 
-We also have a bug bounty program that can be found here: https://hackerone.com/confirmed_inc
+We also have a bug bounty program -- please email <engineering@confirmedvpn.com> for details.
 
 ## License
 
